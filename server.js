@@ -4,6 +4,13 @@ const express = require('express')
 const app = express()
 //good idea to use variable instead of port number
 const PORT = 8000
+//cors module so we can access data from api on a locally hosted file
+const cors = require('cors')
+
+
+//tell server to use cors
+app.use(cors())
+
 //this is an object that has some info in it
 const rappers = {
     '21 savage' : {
